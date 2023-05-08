@@ -27,8 +27,8 @@ if st.button('Prediksi Penyakit Gagal Jantung'):
     predict = model.predict([[age,anaemia,creatinine_phosphokinase,diabetes,ejection_fraction,high_blood_pressure,platelets,serum_creatinine,serum_sodium,sex,smoking,time]])
     
     if (predict[0]==0):
-        predict = 'Pasien Terkena Penyakit Gagal Jantung'
+        predict = 'Pasien bukan pengidap penyakit gagal jantung'
     else:
-        predict = 'Pasien Tidak Terkena Penyakit Gagal Jantung'
+        predict = 'Pasien adalah pengidap penyakit gagal jantung'
         
 st.success(predict)
